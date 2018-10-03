@@ -1,9 +1,6 @@
 ---
-layout: creation.njk
-permalink: creation.html
-tags: creation
 title: Le musée Jacques Prévert
-pictures :
+pictures:
 - creation3_1.jpg
 - creation3_2.jpg
 ---
@@ -14,4 +11,7 @@ Deux grandes tables avec un piètement inspiré des tréteaux Stello et un plate
 Une table basse à poignées, avec plateau recouvert de linoleum
 
 une série de tabourets avec assise carrée en contreplaqué bouleau
+
+<!-- more -->
+
 

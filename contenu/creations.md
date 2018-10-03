@@ -1,5 +1,4 @@
 ---
-layout: boutique.njk
-permalink: boutique.html
-title : Notre boutique 
+layout: creations
+title : Nos créations 
 ---
