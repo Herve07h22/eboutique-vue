@@ -14,17 +14,17 @@
                 :class="{'agile__dot--current': n - 1 === currentSlide}"
                 @mouseover="handleMouseOver('dot')" @mouseout="handleMouseOut('dot')">
 
-                <button @click="setSlide(n - 1)" type="button">{{n}}</button>
+                <div @click="setSlide(n - 1)">{{n}}</div>
             </li>
         </ul>
 
-        <button v-if="settings.arrows && !settings.unagile" class="agile__arrow agile__arrow--prev"
+        <div v-if="settings.arrows && !settings.unagile" class="agile__arrow agile__arrow--prev"
                 :disabled="currentSlide === 0 && !settings.infinite" @click="prevSlide" v-html="settings.prevArrow">
-        </button>
-        <button v-if="settings.arrows && !settings.unagile" class="agile__arrow agile__arrow--next"
+        </div>
+        <div v-if="settings.arrows && !settings.unagile" class="agile__arrow agile__arrow--next"
                 :disabled="currentSlide === slidesCount - 1 && !settings.infinite" @click="nextSlide"
                 v-html="settings.nextArrow">
-        </button>
+        </div>
     </div>
 </template>
 
@@ -617,6 +617,8 @@
         }
 
         &__arrow {
+            display: inline-block;
+            width:1em;
             &[disabled] {
                 cursor: default;
             }
@@ -625,19 +627,17 @@
         &__dots {
             align-items: center;
             display: flex;
-            list-style: none;
+            list-style: inside;
             margin: 0;
             padding: 0;
             white-space: nowrap;
         }
 
         &__dot {
-            button {
-                cursor: pointer;
-                display: block;
-                font-size: 0;
-                line-height: 0;
-            }
+            cursor: pointer;
+            display: block;
+            font-size: 0;
+            line-height: 0;
         }
     }
 </style>

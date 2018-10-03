@@ -1,12 +1,12 @@
 <template>
     <div>
-        <section class="my-8 container max-w-xl mx-auto">
+        <section class="my-8 container max-w-xl mx-auto px-4">
             <Content/>
         </section>
 
         <section class="my-8 container max-w-xl m-auto flex flex-wrap flex-row items-stretch justify-between">
             
-                <div  v-for="product in products" class="w-full md:w-1/4 rounded-lg border-grey-darker shadow px-4 py-2">
+                <div  v-for="product in products" class="w-full md:w-1/4 mt-24 rounded-lg border-grey-darker shadow-md px-4 py-2">
                     <img :src="productPath(product.frontmatter.pictures[0])" :alt="product.frontmatter.short_description">
                     <div class="p-6 flex flex-col justify-between ">
                         <h1 class="font-medium text-xl mb-4 leading-normal"> {{ product.frontmatter.title }} </h1>
