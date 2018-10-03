@@ -1,22 +1,22 @@
 module.exports = {
-    title: "Ma boutique",
+    title: "Maké Maké",
     themeConfig: {
       nav: [
         {
           text: "Boutique",
-          link: "boutique"
+          link: "/boutique"
         },
         {
           text: "Créations",
-          link: "creations"
+          link: "/creations"
         },
         {
             text: "Conseils",
-            link: "blog"
+            link: "/blog"
         },
         {
             text: "A propos",
-            link: "about"
+            link: "/about"
         },
       ]
     },

@@ -1,18 +1,17 @@
 ---
-layout: product.njk
-tags: product
+layout: product
 title: BIWO NOIR
-short_description: Bureau évolutif avec tableau
+short_description: Bureau évolutif
 price: 186.00
-currency: euro
+currency: €
 max_quantity: 2
-price_explanation : dont Eco-part 0.25 € / Prix hors frais de port 
-pictures :
-- product1_1.jpg
-- product1_2.jpg
-- product1_3.jpg
-- product1_4.jpg
-product_shipping : Expédié en kit avec la fiche de montage.
+price_explanation : dont Eco-part 0.25 € / Prix hors frais de port
+product_shipping : Expédié en kit avec la fiche de montage. 
+pictures:
+- product2_1.jpg
+- product2_2.jpg
+- product2_3.jpg
+- product2_4.jpg
 ---
 Biwo noir est un bureau évolutif pour enfant.
 On y lit, on y écrit, on dessine au tableau… On en rêve !
@@ -21,4 +20,6 @@ Le bureau Biwo est fabriqué en France. Il est en contreplaqué bouleau issu de 
 Finition : huile naturelle végétale et écologique.
 2 hauteurs de plateau : 47 et 57,5 cm
 H : 92 cm – L : 73 cm – P : 47 cm – ép. 15 mm
+
+Expédié en kit avec la fiche de montage.
 

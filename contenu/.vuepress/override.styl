@@ -1,3 +1,6 @@
+
+$accentColor = #d73232
+
 @tailwind preflight;
 @tailwind components;
 
@@ -6,10 +9,29 @@
     h1
         margin-bottom: 0.5em
         margin-top: 0.5em
+        color : $accentColor
     h2
         margin-bottom: 0.2em
         margin-top: 0.2em
+        color : $accentColor
+
+h1
+    color : $accentColor
 
 @tailwind utilities;
+
+.transition-normal {
+    transition: .2s ease-in-out;
+  }
+
+.-translate-50-50 {
+-webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+
+.transform-scale-1-1 {
+-webkit-transform: scale(1.1);
+        transform: scale(1.1);
+}
 
 

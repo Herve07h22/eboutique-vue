@@ -1,16 +1,15 @@
-# Hello VuePress !
+---
+layout: homepage
+title : Du mobilier pour petits et grands enfants! 
+carroussel: 
+- carroussel1.jpg
+- carroussel2.jpg
+- carroussel3.jpg
+side_picture : momepage_side.jpg
+---
+# Du mobilier pour petits et grands enfants!
 
+### Un design poétique et durable
+makémaké est une nouvelle marque française qui propose des meubles écologiques. Notre première collection est en contreplaqué bouleau, le mobilier est livré à plat, à monter soi-même, sans clou ni colle. Ludiques, nos meubles conjuguent le fonctionnel et le jeu de construction.
 
-<div class="rounded overflow-hidden md:w-3/5">
-    <div class="text-black bg-grey px-6 py-4 text-sm font-semibold relative shadow z-10">
-        <div class="uppercase mb-6">Grey</div>
-        <div class="flex justify-between">
-            <span>Base</span>
-            <span class="font-normal opacity-75">#B8C2CC</span>
-        </div>
-    </div>
-    <div class="text-black bg-white px-6 py-3 text-sm font-semibold flex justify-between">
-        <span>White</span>
-        <span class="font-normal opacity-75">#FFFFFF</span>
-    </div>
-</div>
+Fabriqué en Normandie, France

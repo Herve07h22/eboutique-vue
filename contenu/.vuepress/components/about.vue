@@ -8,7 +8,7 @@
                 <img :src="picture" alt=""/>
             </div>
         </div>
-        <div class="w-full lg:w-2/3 text-grey-darker px-4 py-2">
+        <div class="w-full lg:w-2/3 px-4 py-2">
             <Content/>
         </div>
     </div>
@@ -27,17 +27,6 @@ export default {
 
 <style lang="css">
 
-.btn {
-  @apply font-bold py-2 px-4 rounded;
-}
-
-.btn-blue {
-  @apply bg-blue text-white;
-}
-
-.btn-blue:hover {
-  @apply bg-blue-dark;
-}
 
 </style>
 
