@@ -1,5 +1,9 @@
 ---
-layout: blog.njk
-permalink: blog.html
-title : Tous nos conseils 
+layout: blog
+title: Tous nos conseils 
 ---
+
+# Retrouvez notre actualité
+Au travers des articles ci-dessous, retrouvez nos conseils et notre actualité.
+
+

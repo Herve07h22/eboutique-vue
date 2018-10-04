@@ -9,14 +9,13 @@
             </div>
         </div>
 
-        <ul ref="dots" v-if="settings.dots && !settings.unagile" class="agile__dots">
-            <li v-for="n in slidesCount" class="agile__dot"
-                :class="{'agile__dot--current': n - 1 === currentSlide}"
-                @mouseover="handleMouseOver('dot')" @mouseout="handleMouseOut('dot')">
+        <div ref="dots" v-if="settings.dots && !settings.unagile" class="agile__dots">
+            <div v-for="n in slidesCount" class="agile__dot"
+                :class="{'agile__dot__active': n - 1 === currentSlide}"
+                @mouseover="handleMouseOver('dot')" @mouseout="handleMouseOut('dot')" @click="setSlide(n - 1)">
 
-                <div @click="setSlide(n - 1)">{{n}}</div>
-            </li>
-        </ul>
+            </div>
+        </div>
 
         <div v-if="settings.arrows && !settings.unagile" class="agile__arrow agile__arrow--prev"
                 :disabled="currentSlide === 0 && !settings.infinite" @click="prevSlide" v-html="settings.prevArrow">
@@ -625,19 +624,26 @@
         }
 
         &__dots {
-            align-items: center;
-            display: flex;
-            list-style: inside;
+            text-align: center;
             margin: 0;
             padding: 0;
-            white-space: nowrap;
+            height: 10px;
         }
 
         &__dot {
             cursor: pointer;
-            display: block;
-            font-size: 0;
-            line-height: 0;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border-color: black;
+            border-width: 1px;
+            &__active {
+                background: black;
+            }
         }
     }
 </style>

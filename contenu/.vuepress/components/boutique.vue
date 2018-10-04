@@ -15,7 +15,7 @@
                 
                         <div class="flex flex-row content-between">
                             <div class="text-sm flex-1 hover:bg-grey-light rounded text-center mx-2 p-1">
-                                <router-link  :to="product.path">Acheter</router-link>
+                                <router-link  :to="product.path">Commander</router-link>
                             </div>
                             <div class="text-sm flex-1 hover:bg-grey-light rounded text-center mx-2 p-1">
                                 <router-link :to="product.path">Détail</router-link>
