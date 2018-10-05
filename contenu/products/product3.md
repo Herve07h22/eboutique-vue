@@ -4,7 +4,7 @@ title: BOLIDE
 short_description: Meuble d'angle
 price: 66.00
 currency: €
-max_quantity: 2
+max_quantity: 0
 price_explanation: dont Eco-part 0.25 € / Prix hors frais de port
 product_shipping: Expédié en kit avec la fiche de montage. 
 pictures:

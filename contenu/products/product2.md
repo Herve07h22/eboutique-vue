@@ -4,7 +4,7 @@ title: BIWO NOIR
 short_description: Bureau évolutif
 price: 186.00
 currency: €
-max_quantity: 2
+max_quantity: 4
 price_explanation : dont Eco-part 0.25 € / Prix hors frais de port
 product_shipping : Expédié en kit avec la fiche de montage. 
 pictures:

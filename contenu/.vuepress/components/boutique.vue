@@ -43,7 +43,7 @@
                     
                             <div class="flex flex-row">
                                 <ClientOnly>
-                                    <div class="flex-1 text-center bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-3 mx-2 rounded text-xs tracking-wide" @click="addToCart(product.frontmatter.title, 1, product.frontmatter.price, productPath(product.frontmatter.pictures[0]))">
+                                    <div v-if="product.frontmatter.max_quantity" class="flex-1 text-center bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-3 mx-2 rounded text-xs tracking-wide" @click="addToCart(product.frontmatter.title, product.frontmatter.max_quantity, product.frontmatter.price, productPath(product.frontmatter.pictures[0]))">
                                         Commander
                                     </div>
                                 </ClientOnly>
@@ -81,14 +81,14 @@ export default {
         productPath(name) {
             return "products/" + name
         }, 
-        addToCart(productName, quantity, price, pict) {
+        addToCart(productName, maxQuantity, price, pict) {
             if (this.cart) {
                 var product = this.cart.filter( (p) => (p.productName == productName));
                 if (!product.length) {
-                    this.cart.push( { productName:productName, quantity:quantity, price:price, pict:pict } );
+                    this.cart.push( { productName:productName, quantity:1, maxQuantity : maxQuantity, price:price, pict:pict } );
                 }
             } else {
-                this.cart = [ { productName:productName, quantity:quantity, price:price, pict:pict } ] ;
+                this.cart = [ { productName:productName, quantity:1, maxQuantity : maxQuantity, price:price, pict:pict } ] ;
             }
             this.saveCart();
             //go to cart
@@ -101,7 +101,7 @@ export default {
         addQuantity(productName, n) {
             var product = this.cart.filter( (p) => (p.productName == productName));
             if (product.length) {
-                product[0].quantity = product[0].quantity +n;
+                product[0].quantity = Math.min( product[0].quantity +n, product[0].maxQuantity);
                 if (product[0].quantity <1 ) {
                     // remove from the cart
                     this.cart = this.cart.filter( (p) => (p.productName != productName));
