@@ -28,9 +28,11 @@
                     <div class="mx-2 px-4 text-grey-dark text-sm">
                         <span>{{$page.frontmatter.price_explanation}}</span>
                     </div>
-                    <div class="my-4 mx-2 text-center">
-                        <button class="bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-6 rounded uppercase text-xs tracking-wide">Commander</button>
-                    </div>
+                    <ClientOnly>
+                        <div class="my-4 mx-2 text-center">
+                            <button @click="addToCart($page.frontmatter.title, 1, $page.frontmatter.price, productPath($page.frontmatter.pictures[0]))" class="bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-6 rounded uppercase text-xs tracking-wide">Commander</button>
+                        </div>
+                    </ClientOnly>
                 </div>
 
             </div>
@@ -49,7 +51,25 @@ export default {
     }, 
     mounted : function() {
         this.displayedPicture = this.$page.frontmatter.pictures[0]
-    }
+    },
+    methods: {
+        addToCart(productName, quantity, price, pict) {
+            var cart = (localStorage.cart && JSON.parse(localStorage.cart)) || [];
+            if (this.cart) {
+                var product = this.cart.filter( (p) => (p.productName == productName));
+                if (!product.length) {
+                    this.cart.push( { productName:productName, quantity:quantity, price:price, pict:pict } );
+                }
+            } else {
+                this.cart = [ { productName:productName, quantity:quantity, price:price, pict:pict } ] ;
+            }
+            localStorage.cart = JSON.stringify(this.cart);
+            this.$router.push('/boutique.html#votre-panier')
+        },
+        productPath(name) {
+            return "products/" + name
+        }, 
+    },
 }
 </script>
 
