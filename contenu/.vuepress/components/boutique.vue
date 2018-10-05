@@ -43,13 +43,18 @@
                     
                             <div class="flex flex-row">
                                 <ClientOnly>
-                                    <div v-if="product.frontmatter.max_quantity" class="flex-1 text-center bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-3 mx-2 rounded text-xs tracking-wide" @click="addToCart(product.frontmatter.title, product.frontmatter.max_quantity, product.frontmatter.price, productPath(product.frontmatter.pictures[0]))">
+                                    <button v-if="product.frontmatter.max_quantity" class="flex-1 text-center bg-red hover:bg-grey-darkest text-white hover:text-white py-3 mx-2 rounded text-xs" @click="addToCart(product.frontmatter.title, product.frontmatter.max_quantity, product.frontmatter.price, productPath(product.frontmatter.pictures[0]))">
                                         Commander
-                                    </div>
+                                    </button>
+                                    <button v-else disabled class="flex-1 text-center bg-red-lighter text-white py-3 mx-2 rounded text-xs">
+                                        En rupture
+                                    </button>
                                 </ClientOnly>
-                                <div class="flex-1 text-center bg-white border border-grey hover:bg-grey-light hover:text-white mx-2 py-3 px-3 rounded text-xs">
-                                    <router-link :to="product.path">Détails</router-link>
-                                </div>
+                                <router-link :to="product.path">
+                                    <button class="flex-1 text-center bg-white border border-grey hover:bg-grey-light mx-2 py-3 px-6 rounded text-xs">
+                                    Détails
+                                    </button>
+                                </router-link>
                             </div>
                         </div>
                     </div>    
