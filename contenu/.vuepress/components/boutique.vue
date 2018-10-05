@@ -66,7 +66,7 @@
 export default {
     data: function () {
         return {
-            cart: (localStorage.cart && JSON.parse(localStorage.cart)) || []
+            cart: [] 
         }
     },
     computed: {
@@ -75,6 +75,7 @@ export default {
         },
     },
     mounted : function () {
+        this.cart = localStorage.cart && JSON.parse(localStorage.cart) || []
     },
     methods: { 
         productPath(name) {
