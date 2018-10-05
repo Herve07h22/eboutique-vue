@@ -14,6 +14,9 @@
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "tailwindcss": "^0.6.6",
-    "vuepress" : "^0.14.4"
+    "vuepress": "^0.14.4"
+  },
+  "dependencies": {
+    "vue-stripe-checkout": "^1.0.8"
   }
 }

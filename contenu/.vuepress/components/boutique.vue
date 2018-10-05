@@ -10,8 +10,8 @@
                 <div class="flex flex-col"> 
                     <div class="flex flex-row my-2 p-2 flex-wrap border border-gray rounded justify-between text-xl" v-for="p in cart">
                         <div class="flex1 mx-8 my-2 p-2 w-16"><img :src="p.pict"></div>
-                        <div class="self-center w-1/4 my-2 p-2">{{p.productName}}</div>
-                        <div class="self-center my-2 w-1/6">
+                        <div class="self-center w-1/2 md:w-1/4 my-2 p-2">{{p.productName}}</div>
+                        <div class="self-center text-center my-2 w-1/2 md:w-1/6">
                             <svg @click="addQuantity(p.productName,-1)" aria-hidden="true" class="fill-current pt-2 h-6 w-6 text-grey hover:text-black" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z"></path>
                             </svg>
@@ -21,13 +21,13 @@
                             </svg>
 
                         </div>
-                        <div class="self-center w-1/6 my-2 p-2">{{p.price}} €</div>
-                        <div class="self-center w-1/6 my-2 p-2 font-semibold">{{p.price * p.quantity}} €</div>
+                        <div class="self-center text-center md:text-left w-1/2 md:w-1/6 my-2 p-2">{{p.price}} €</div>
+                        <div class="self-center text-center md:text-left w-full md:w-1/6 my-2 p-2 font-bold">{{p.price * p.quantity}} €</div>
                         
                     </div>
                 </div>
                 <div class="text-center m-4">
-                    <button class="bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-6 rounded uppercase text-xs tracking-wide">Payer</button>
+                    <button @click="checkout" class="bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-6 rounded uppercase text-xs tracking-wide">Payer</button>
                 </div>
             </section>
         </ClientOnly>
@@ -71,7 +71,9 @@
 export default {
     data: function () {
         return {
-            cart: [] 
+            cart: [],
+            thankYou : false,
+            somethingWrong: false 
         }
     },
     computed: {
@@ -80,7 +82,11 @@ export default {
         },
     },
     mounted : function () {
-        this.cart = localStorage.cart && JSON.parse(localStorage.cart) || []
+        this.cart = localStorage.cart && JSON.parse(localStorage.cart) || [];
+        console.log("Mounting stripe checkout")
+        const script = document.createElement('script');
+        script.src = 'https://checkout.stripe.com/checkout.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
     },
     methods: { 
         productPath(name) {
@@ -113,6 +119,61 @@ export default {
                 }
             }
             this.saveCart()
+        },
+        checkout() {
+            // il faudrait mieux écrire checkout(cart, resolve, error)
+            const options = {
+                key: 'pk_test_m9CdtooEtrGFF5NEru2IySxv',
+                locale: 'auto',
+                currency: 'EUR',
+                billingAddress: true,
+                panelLabel: 'Payer {{amount}}'
+            }
+            console.log("Configuring the options");
+            var checkout = window.StripeCheckout.configure(options);
+            console.log("paiement")
+            if (this.cart) {
+                var totalAmount = this.cart.reduce( (somme, p) => somme+(p.quantity*p.price),0) * 100
+                console.log("Total amount :")
+                console.log(totalAmount)
+                console.log("checkout")
+                // this.$checkout.close() 
+                // is also available.
+                checkout.open({
+                    name: 'Make Make',
+                    currency: 'EUR',
+                    amount: totalAmount,
+                    token: (token) => {
+                        console.log(token)
+                        // on appelle l'API
+                        var json_upload = JSON.stringify({
+                             amount:totalAmount,
+                             currency:'eur', 
+                             description:'Make make', 
+                             source:token.id,
+                             email:token.email,
+                             cart:this.cart
+                        });
+
+                        var xmlhttp = new XMLHttpRequest();  
+                        xmlhttp.open("POST", "https://efdct405r4.execute-api.eu-west-3.amazonaws.com/api/pay/makemake");
+                        xmlhttp.setRequestHeader("Content-Type", "application/json");
+                        xmlhttp.send(json_upload);
+
+                        xmlhttp.onreadystatechange = function() {
+                            if (xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200) {
+                                // tout est OK
+                                var response = JSON.parse(xmlhttp.response);
+                                console.log(response)
+                                // émettre un evt
+                                this.thankYou = true;
+                            } else {
+                                this.somethingWrong = true;
+                            }
+                        }
+                    } 
+                })
+            }
         }
     }
 }
