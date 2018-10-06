@@ -1,6 +1,7 @@
 <template>
 
     <div>
+        <cart ref="cartManager" :isVisible="false" :gotoPage="'/boutique.html'" /> 
         <section class="my-8 container max-w-xl mx-auto">
             <div class="flex flex-row flex-wrap">
                 <div class="flex flex-col md:w-1/2 w-full p-2">
@@ -57,18 +58,13 @@ export default {
         this.displayedPicture = this.$page.frontmatter.pictures[0]
     },
     methods: {
-        addToCart(productName, maxQuantity, price, pict) {
-            var cart = (localStorage.cart && JSON.parse(localStorage.cart)) || [];
-            if (cart) {
-                var product = cart.filter( (p) => (p.productName == productName));
-                if (!product.length) {
-                    cart.push( { productName:productName, quantity:1, maxQuantity : maxQuantity, price:price, pict:pict } );
-                }
-            } else {
-                cart = [ { productName:productName, quantity:1, maxQuantity : maxQuantity, price:price, pict:pict } ] ;
-            }
-            localStorage.cart = JSON.stringify(cart);
-            this.$router.push('/boutique.html#votre-panier')
+        addToCart(title, max_quantity, price, picture) {
+            this.$refs.cartManager.addToCart(
+                title,
+                max_quantity,
+                price,
+                picture
+            ) 
         },
         productPath(name) {
             return "products/" + name
