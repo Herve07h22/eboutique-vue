@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <cart ref="cartManager" :isVisible="false" :gotoPage="'/boutique.html'" /> 
+        <cart ref="cartManager" :isVisible="false" :gotoPage="'/boutique.html#panier'" /> 
         <section class="my-8 container max-w-xl mx-auto">
             <div class="flex flex-row flex-wrap">
                 <div class="flex flex-col md:w-1/2 w-full p-2">

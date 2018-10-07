@@ -20,6 +20,10 @@ module.exports = {
         },
       ]
     },
+    head: [
+      ['script', { type : "text/javascript", src : "https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js" }],
+      ['script', { type : "text/javascript", src : "https://checkout.stripe.com/checkout.js" }],
+    ],
     postcss: {
         plugins: [
           require("tailwindcss")("./tailwind.config.js"),

@@ -72,10 +72,10 @@ export default {
     },
     mounted : function () {
         this.cart = localStorage.cart && JSON.parse(localStorage.cart) || [];
-        console.log("Mounting stripe checkout")
-        const script = document.createElement('script');
-        script.src = 'https://checkout.stripe.com/checkout.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
+        //console.log("Mounting stripe checkout")
+        //const script = document.createElement('script');
+        //script.src = 'https://checkout.stripe.com/checkout.js';
+        //document.getElementsByTagName('head')[0].appendChild(script);
     },
     methods: {
         checkout() {
@@ -145,7 +145,6 @@ export default {
                         xmlhttp.onreadystatechange = function() {
                             if (xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200) {
                                 var response = JSON.parse(xmlhttp.response);
-                                console.log(response)
                                 successfullOrder();
                             } else {
                                 errorOrder();

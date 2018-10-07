@@ -14,7 +14,7 @@
             </div>
             <div class="flex flex-row flex-wrap px-4 py-2">
                 <div class="flex1 w-1/2" v-for="picture in creation.frontmatter.pictures">
-                     <img :src="creationPath(picture)">
+                     <app-image :lazy-src="creationPath(picture)" />
                 </div>
             </div>
         </section>

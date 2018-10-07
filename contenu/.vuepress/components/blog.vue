@@ -10,7 +10,9 @@
                     <div class="flex1">
                         <router-link :to="art.path">
                             <h2 class="text-grey-darker mx-4 my-8">{{art.frontmatter.title}}</h2>
-                            <img class="py-2" :src="articlePath(art.frontmatter.pictures[0])"/>
+                            <div class="py-2">
+                                <app-image :lazy-src="articlePath(art.frontmatter.pictures[0])"/>
+                            </div> 
                         </router-link>
                     </div>
                     <div class="flex1">
