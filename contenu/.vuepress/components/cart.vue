@@ -100,20 +100,16 @@ export default {
                 var totalAmount = this.cart.reduce( (somme, p) => somme+(p.quantity*p.price),0) * 100
                 var self = this
                 const successfullOrder = () => {
-                    console.log("successfullOrder")
-                    console.log(self) 
                     self.thankYou = true
                     self.somethingWrong = false
                     self.processingOrder = false
-                    self.informationMessage = "Merci pour votre commande ! Vous allez recevoir un mail de confirmation."
+                    self.informationMessage = "Votre commande est enregistrée ! Vous allez recevoir un mail de confirmation."
                     self.cart = []
                     self.saveCart()
                     return true;    
                 }
 
                 const errorOrder = () => {
-                    console.log("errorOrder")
-                    console.log(self) 
                     self.thankYou = false
                     self.somethingWrong = true
                     self.processingOrder = false
