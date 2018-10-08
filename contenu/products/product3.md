@@ -19,5 +19,4 @@ Finition : huile naturelle végétale et écologique.
 Contreplaqué bouleau – ép. 15 mm
 L : 37 cm – P : 31 cm – H plateau : 36 cm – H totale: 56 cm
 
-Expédié en kit avec la fiche de montage.
 

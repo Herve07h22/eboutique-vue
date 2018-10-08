@@ -6,6 +6,7 @@ price: 80
 currency: "€"
 max_quantity: 2
 price_explanation: dont Eco-part 0.25 € / Prix hors frais de port
+product_shipping : Expédié en kit avec la fiche de montage.
 pictures:
 - product1_1.jpg
 - product1_2.jpg
@@ -17,5 +18,3 @@ Benko est un petit banc aux multiples usages. Vous pouvez vous y asseoir, vous e
 Le Benko est fabriqué en France. Il est en contreplaqué bouleau issu de forêts gérées durablement.
 Finition : huile naturelle végétale et écologique.
 L : 56 cm – P : 19 cm – H : 25 cm – épaisseur 15 mm
-
-Expédié en kit avec la fiche de montage.

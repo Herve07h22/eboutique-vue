@@ -21,5 +21,4 @@ Finition : huile naturelle végétale et écologique.
 2 hauteurs de plateau : 47 et 57,5 cm
 H : 92 cm – L : 73 cm – P : 47 cm – ép. 15 mm
 
-Expédié en kit avec la fiche de montage.
 

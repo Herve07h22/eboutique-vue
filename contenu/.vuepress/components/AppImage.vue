@@ -1,10 +1,8 @@
 <template>
         <img
-            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
             :data-src="lazySrc"
-            :data-srcset="lazySrcset"
             :style="style"
-            class="lozad"
+            class="AppImage"
         >
 </template>
 
@@ -14,30 +12,17 @@
 export default {
   name: 'AppImage',
   props: {
-    backgroundColor: {
-      type: String,
-      default: '#efefef',
-    },
-    height: {
-      type: Number,
-      default: null,
-    },
     lazySrc: {
       type: String,
       default: null,
-    },
-    lazySrcset: {
-      type: String,
-      default: null,
-    },
-    width: {
-      type: Number,
-      default: null,
-    },
+    }
   },
   data() {
     return {
       loading: true,
+      height : null,
+      width : null,
+      backgroundColor : '#efefef'
     };
   },
   computed: {
@@ -75,6 +60,13 @@ export default {
 
       return style;
     },
+  },
+  created() {
+        console.log("Processing image : " + this.lazySrc)
+        // get image's width & height
+
+        // generate main color pixel for the background
+
   },
   mounted() {
 
