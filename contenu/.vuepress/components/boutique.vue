@@ -11,7 +11,7 @@
             
                 <div  v-for="product in products" class="w-full md:w-1/3 mt-8 ">
                     <div class="rounded-lg border-grey-darker shadow-md px-4 py-2 mx-2">
-                        <img :src="productPath(product.frontmatter.pictures[0])" :alt="product.frontmatter.short_description">
+                        <app-image :image-src="product.frontmatter.pictures[0]"  />
                         <div class="p-6 flex flex-col justify-between ">
                             <h1 class="font-medium text-xl mb-4 leading-normal"> {{ product.frontmatter.title }} </h1>
                             <p class="font-medium text-grey-dark mb-4 leading-normal">{{ product.frontmatter.short_description }}</p>
@@ -19,7 +19,7 @@
                     
                             <div class="flex flex-row">
                                 <ClientOnly>
-                                    <button v-if="product.frontmatter.max_quantity" class="text-center bg-red hover:bg-grey-darkest text-white hover:text-white px-4 py-3 mx-2 rounded text-xs" @click="addToCart(product.frontmatter.title, product.frontmatter.max_quantity, product.frontmatter.price, productPath(product.frontmatter.pictures[0]))">
+                                    <button v-if="product.frontmatter.max_quantity" class="text-center bg-red hover:bg-grey-darkest text-white hover:text-white px-4 py-3 mx-2 rounded text-xs" @click="addToCart(product.frontmatter.title, product.frontmatter.max_quantity, product.frontmatter.price, productPath(product.frontmatter.pictures[0].name))">
                                         Commander
                                     </button>
                                     <button v-else disabled class="text-center bg-red-lighter text-white px-4 py-3 mx-2 rounded text-xs">

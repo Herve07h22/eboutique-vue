@@ -1,7 +1,7 @@
 ---
 title: Du mobilier sur mesure
 pictures:
-- creation1.jpg
+-  { path : creations, name : creation1.jpg, height: 703, width: 747 }
 ---
 ### Vous êtes architecte, décorateur, ou vous avez un projet particulier?
 Nous pouvons concevoir, dessiner et réaliser pour vous des modèles originaux et des petites séries de mobilier pour aménager vos espaces :

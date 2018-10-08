@@ -8,11 +8,10 @@ max_quantity: 2
 price_explanation: dont Eco-part 0.25 € / Prix hors frais de port
 product_shipping : Expédié en kit avec la fiche de montage.
 pictures:
-- product1_1.jpg
-- product1_2.jpg
-- product1_3.jpg
-- product1_4.jpg
-
+-  { path : "products", name : product1_1.jpg, height: 2444, width: 2444 }
+-  { path : "products", name : product1_2.jpg, height: 1575, width: 1575 }
+-  { path : "products", name : product1_3.jpg, height: 1575, width: 1575 }
+-  { path : "products", name : product1_4.jpg, height: 1575, width: 1575 }
 ---
 Benko est un petit banc aux multiples usages. Vous pouvez vous y asseoir, vous en servir d’étagère, ou bien d’escabeau. Grâce à ses poignées, transportez-le partout dans la maison ! Il convient aux enfants à partir de 3 ans, il est aussi très pratique pour toute la famille. Il s’accorde avec le bureau évolutif BIWO, quand il est en position basse.
 Le Benko est fabriqué en France. Il est en contreplaqué bouleau issu de forêts gérées durablement.

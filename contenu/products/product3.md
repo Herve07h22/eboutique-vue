@@ -8,9 +8,9 @@ max_quantity: 0
 price_explanation: dont Eco-part 0.25 € / Prix hors frais de port
 product_shipping: Expédié en kit avec la fiche de montage. 
 pictures:
-- product3_1.jpg
-- product3_2.jpg
-- product3_3.jpg
+-  { path : "products", name : product3_1.jpg, height: 1515, width: 1515 }
+-  { path : "products", name : product3_2.jpg, height: 1575, width: 1575 }
+-  { path : "products", name : product3_3.jpg, height: 1000, width: 1000 }
 ---
 Meuble d’angle.
 Bolide est un petit meuble qui vous permettra d’optimiser l’espace en utilisant les angles. Bolide s’utilise également en table de chevet. Associez quatre bolides, et vous obtiendrez un nouveau meuble. Ses lignes aérodynamiques rappellent celles du siège GRANDE VITESSE et de la table MÉTÉORE.

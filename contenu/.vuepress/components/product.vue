@@ -6,11 +6,13 @@
             <div class="flex flex-row flex-wrap">
                 <div class="flex flex-col md:w-1/2 w-full p-2">
                     <div class="m-2">
-                         <img :src="$withBase(displayedPicture)">
+                        <img :src="displayedPicture.name" />
                     </div>
                     <div class="inline-flex content-start m-2">
                         <div class="w-24 p-2" v-for="picture in $page.frontmatter.pictures">
-                            <img class="border hover:border-grey-dark rounded cursor-pointer" :src="$withBase(picture)" @click="displayedPicture=picture">
+                            <div class="border hover:border-grey-dark rounded cursor-pointer" @click="displayedPicture=picture">
+                                <app-image :image-src="picture" :image-path="false" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,7 +33,7 @@
                     </div>
                     <ClientOnly v-if="$page.frontmatter.max_quantity">
                         <div  class="my-4 mx-2 text-center">
-                            <button @click="addToCart($page.frontmatter.title, $page.frontmatter.max_quantity, $page.frontmatter.price, productPath($page.frontmatter.pictures[0]))" class="bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-6 rounded uppercase text-xs tracking-wide">Commander</button>
+                            <button @click="addToCart($page.frontmatter.title, $page.frontmatter.max_quantity, $page.frontmatter.price, productPath($page.frontmatter.pictures[0].name))" class="bg-red hover:bg-grey-darkest text-white hover:text-white py-3 px-6 rounded uppercase text-xs tracking-wide">Commander</button>
                         </div> 
                     </ClientOnly>
                     <div class="my-4 mx-2 text-center" v-else>

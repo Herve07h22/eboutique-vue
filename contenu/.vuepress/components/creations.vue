@@ -14,7 +14,7 @@
             </div>
             <div class="flex flex-row flex-wrap px-4 py-2">
                 <div class="flex1 w-1/2" v-for="picture in creation.frontmatter.pictures">
-                     <app-image :lazy-src="creationPath(picture)" />
+                     <app-image :image-src="picture" />
                 </div>
             </div>
         </section>
@@ -31,12 +31,6 @@ export default {
             return this.$site.pages.filter(x => x.path.startsWith('/creations/'));
         }
     },
-    methods: { 
-        creationPath(name) {
-            return "creations/" + name
-        }
-    }
-    
 }
 </script>
 

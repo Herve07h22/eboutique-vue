@@ -10,11 +10,23 @@
         <div class="w-full text-grey-darker px-4 py-2">
             <Content/>
         </div>
+        <div>
+            {{ test_im }}
+        </div>
     </section>
 </template>
 
 <script>
 export default {
+    data : function() {
+        return {
+        }
+    },
+    computed : {
+        test_im() {
+            return this.$lazyImages
+        }
+    }
     
 }
 </script>

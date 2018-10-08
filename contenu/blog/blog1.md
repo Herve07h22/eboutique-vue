@@ -2,7 +2,7 @@
 layout: articleblog
 title: Le salon PITTI BIMBO
 pictures:
-- blog1.jpg
+    - { path: blog, name: blog1.jpg, height: 900, width: 675 }
 ---
 Les meubles makémaké seront présentés sur le stand d’Unduetrestella, au salon Pitti imagine Bimbo du 21 au 23 juin 2018, à Florence, Italie
 

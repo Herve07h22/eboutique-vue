@@ -2,7 +2,7 @@
 layout: articleblog
 title: On traverse l’Atlantique
 pictures:
-- blog3.jpg
+- { path : blog, name : blog3.jpg, height: 683, width: 1077 }
 ---
 ## MAKÉMAKÉ CHEZ KINDERMODERN
 Nébulon, Totem, Biwo et Western sont désormais en vente dans la belle Galerie new-yorkaise KinderMODERN.

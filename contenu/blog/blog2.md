@@ -2,7 +2,7 @@
 layout: articleblog
 title: La design week de Milan
 pictures:
-- blog2.jpg
+- { path : blog, name : blog2.jpg, height: 376, width: 565 }
 ---
 
 Makémaké a le plaisir de participer à la [Milan Design Week](http://www.unduetrestellababy.com/) avec Unduetrestella Design Week, du 17 au 22 avril 2018.

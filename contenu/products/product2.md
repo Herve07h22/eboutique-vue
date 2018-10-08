@@ -8,10 +8,10 @@ max_quantity: 4
 price_explanation : dont Eco-part 0.25 € / Prix hors frais de port
 product_shipping : Expédié en kit avec la fiche de montage. 
 pictures:
-- product2_1.jpg
-- product2_2.jpg
-- product2_3.jpg
-- product2_4.jpg
+-  { path : "products", name : product2_1.jpg, height: 1575, width: 1575 }
+-  { path : "products", name : product2_2.jpg, height: 1575, width: 1575 }
+-  { path : "products", name : product2_3.jpg, height: 900, width: 900 }
+-  { path : "products", name : product2_4.jpg, height: 1575, width: 1575 }
 ---
 Biwo noir est un bureau évolutif pour enfant.
 On y lit, on y écrit, on dessine au tableau… On en rêve !

@@ -2,8 +2,8 @@
 layout: about
 title : A propos de nous 
 pictures :
-- about1.jpg
-- about2.jpg
+-  { path : "", name : about1.jpg, height: 1443, width: 1088 }
+-  { path : "", name : about2.jpg, height: 675, width: 477 }
 ---
 # makémaké : créateur de mobilier écologique et ludique
 

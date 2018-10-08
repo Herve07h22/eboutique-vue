@@ -11,7 +11,7 @@
                         <router-link :to="art.path">
                             <h2 class="text-grey-darker mx-4 my-8">{{art.frontmatter.title}}</h2>
                             <div class="py-2">
-                                <app-image :lazy-src="articlePath(art.frontmatter.pictures[0])"/>
+                                <app-image :image-src="art.frontmatter.pictures[0]" />
                             </div> 
                         </router-link>
                     </div>

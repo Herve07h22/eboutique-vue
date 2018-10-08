@@ -5,7 +5,6 @@ carroussel:
 - carroussel1.jpg
 - carroussel2.jpg
 - carroussel3.jpg
-side_picture : momepage_side.jpg
 ---
 # Du mobilier pour petits et grands enfants!
 
