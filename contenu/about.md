@@ -5,19 +5,19 @@ pictures :
 -  { path : "", name : about1.jpg, height: 1443, width: 1088 }
 -  { path : "", name : about2.jpg, height: 675, width: 477 }
 ---
-# makémaké : créateur de mobilier écologique et ludique
+# Créateur de mobilier écologique et ludique
 
-makémaké est une petite planète découverte en mars 2005 qui a reçu son nom du Dieu créateur dans le panthéon traditionnel de Rapa Nui, sur l’île de Pâques.
+JonJon est une marque déposée en mars 2005 qui a reçu le soutien de grands noms du designe français. 
 C’est aussi un univers peuplé d’objets ludiques et écologiques, pratiques, poétiques …
 et sympathiques !   
 
 ## Qui sommes-nous ?
 
-Laurence et Stéphanie, designers passionnées.
-Nous nous sommes rencontrées sur les bancs de l’École nationale supérieure de création industrielle (Ensci – Paris)
-Toutes deux installées dans le Cotentin, nous avons travaillé ensemble durant plusieurs années sur différents projets de design, architecture intérieure, scénographie d’exposition et graphisme.
+Jean-Paul et Jonas, designers passionnés.
+Nous nous sommes rencontrés sur les bancs de l’École nationale supérieure de création industrielle (Ensci – Paris)
+Tous deux installées dans le Cotentin, nous avons travaillé ensemble durant plusieurs années sur différents projets de design, architecture intérieure, scénographie d’exposition et graphisme.
 Cette expérience nous a amené à rencontrer de nombreuses entreprises locales et à découvrir leurs savoirs-faire. Est né le désir de développer des produits éco-conçus, pour les petits et les grands enfants.
-Un rêve enfin réalisé : makémaké est née en avril 2017.
+Un rêve enfin réalisé : notre noutique en ligne est lancée en avril 2017.
 
 ## Notre première collection : à vous de jouer !
 
@@ -44,20 +44,20 @@ Nos produits sont protégés par une huile naturelle et végétale labelisée HQ
 Contactez-nous, nous vous répondons rapidement par mail.
 Vos remarques et vos observations sont les bienvenues !
 
-ÉQUIPE makémaké
+ÉQUIPE JonJon
 
-Stéphanie Gilles  : 06 40 34 48 89
+Jean-Paul  : 06 12 34 56 78
 
-Laurence Hamelin  : 06 86 26 70 53
+Jonas  : 06 86 54 32 10
 
-E-mail   : contact@makemake.fr
+E-mail   : contact@jonjon.fr
 
 ## Nous écrire :
 
-makémaké
+Jonjon
 
-Espace Réné LEBAS
+Espace étoilé
 
-61 rue de l’Abbaye
+61 rue de de la lune
 
 50100 Cherbourg-en-Cotentin

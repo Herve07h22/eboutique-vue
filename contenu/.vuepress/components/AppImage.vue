@@ -2,7 +2,7 @@
     <img
         :data-src="lazySrc"
         :style="style"
-        class="AppImage fade"
+        class="AppImage"
     >
 </template>
 
@@ -21,6 +21,10 @@ export default {
             type : Boolean,
             default: true,
         },
+        forceLoad : {
+            type : Boolean,
+            default: false,
+        }
     },
     data() {
         return {
@@ -97,8 +101,13 @@ export default {
         // We initialize Lozad.js on the root
         // element of our component.
         this.observer = window.lozad(this.$el);
-        //const observer = window.lozad();
         this.observer.observe();
+
+        if (this.forceLoad) {
+            console.log("Force Load")
+            this.observer.triggerLoad(this.$el);
+        }
+
     },
 };
 </script>
@@ -106,11 +115,11 @@ export default {
 <style lang="scss">
     // Responsive image styles.
     .AppImage {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    vertical-align: middle;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        vertical-align: middle;
     }
 
     .fade {

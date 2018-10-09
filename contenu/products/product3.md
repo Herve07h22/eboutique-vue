@@ -1,6 +1,6 @@
 ---
 layout: product
-title: BOLIDE
+title: ANGLO
 short_description: Meuble d'angle
 price: 66.00
 currency: €
@@ -13,8 +13,8 @@ pictures:
 -  { path : "products", name : product3_3.jpg, height: 1000, width: 1000 }
 ---
 Meuble d’angle.
-Bolide est un petit meuble qui vous permettra d’optimiser l’espace en utilisant les angles. Bolide s’utilise également en table de chevet. Associez quatre bolides, et vous obtiendrez un nouveau meuble. Ses lignes aérodynamiques rappellent celles du siège GRANDE VITESSE et de la table MÉTÉORE.
-Le meuble Bolide est fabriqué en France. Il est en contreplaqué bouleau issu de forêts gérées durablement.
+Anglo est un petit meuble qui vous permettra d’optimiser l’espace en utilisant les angles. Anglo s’utilise également en table de chevet. Associez quatre Anglo, et vous obtiendrez un nouveau meuble avec des lignes aérodynamiques.
+Le meuble Anglo est fabriqué en France. Il est en contreplaqué bouleau issu de forêts gérées durablement.
 Finition : huile naturelle végétale et écologique.
 Contreplaqué bouleau – ép. 15 mm
 L : 37 cm – P : 31 cm – H plateau : 36 cm – H totale: 56 cm

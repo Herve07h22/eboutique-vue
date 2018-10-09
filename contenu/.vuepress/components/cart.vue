@@ -119,7 +119,7 @@ export default {
     
                 this.waitButton = true
                 checkout.open({
-                    name: 'Make Make',
+                    name: 'Jon Jon',
                     currency: 'EUR',
                     amount: totalAmount,
                     closed: function () {
@@ -131,7 +131,7 @@ export default {
                         var json_upload = JSON.stringify({
                              amount:totalAmount,
                              currency:'eur', 
-                             description:'Make make', 
+                             description:'Jon Jon', 
                              source:token.id,
                              email:token.email,
                              cart:this.cart
@@ -139,7 +139,7 @@ export default {
                         console.log("Retour de Stripe - envoi de la requète à AWS")
                         
                         var xmlhttp = new XMLHttpRequest();  
-                        xmlhttp.open("POST", "https://efdct405r4.execute-api.eu-west-3.amazonaws.com/api/pay/makemake");
+                        xmlhttp.open("POST", "https://efdct405r4.execute-api.eu-west-3.amazonaws.com/api/pay/jonjon");
                         xmlhttp.setRequestHeader("Content-Type", "application/json");
                         xmlhttp.send(json_upload);
                         xmlhttp.onreadystatechange = function() {

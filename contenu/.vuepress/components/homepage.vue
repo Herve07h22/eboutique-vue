@@ -3,7 +3,7 @@
         <ClientOnly>
             <agile :dots="true" :arrows="false" :infinite="true" :autoplay="true" :pauseOnHover="true" :speed="1000" :autoplaySpeed="3000">
                 <div class="slide" v-for="picture in $page.frontmatter.carroussel">
-                    <img :src="picture" alt=""/>
+                    <img :src="picture.name" :height="picture.height" :width="picture.width" />
                 </div>
             </agile>
         </ClientOnly>

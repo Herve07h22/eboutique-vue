@@ -1,5 +1,5 @@
 module.exports = {
-    title: "Maké Maké",
+    title: "Meubles design",
     themeConfig: {
       nav: [
         {
