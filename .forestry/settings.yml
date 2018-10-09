@@ -24,8 +24,8 @@ sections:
   label: Blog
   create: all
   match: "**/*"
-upload_dir: ".vuepress/public"
-public_path: "/.vuepress/dist"
+upload_dir: contenu/.vuepress/public
+public_path: contenu/.vuepress/dist
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
