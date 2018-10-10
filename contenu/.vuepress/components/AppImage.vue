@@ -29,7 +29,8 @@ export default {
     data() {
         return {
         loading: true,
-        backgroundColor : '#efefef',
+        // backgroundColor : '#efefef',
+        backgroundColor : '#ffffff',
         height: this.imageSrc.height,
         width: this.imageSrc.width,
         observer : null
