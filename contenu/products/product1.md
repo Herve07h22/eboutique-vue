@@ -4,7 +4,7 @@ title: PTIPBAN
 short_description: Petit banc à poignées
 price: 80
 currency: "€"
-max_quantity: 0
+max_quantity: 3
 price_explanation: dont Eco-part 0.25 € / Prix hors frais de port
 product_shipping: Expédié en kit avec la fiche de montage.
 pictures:
