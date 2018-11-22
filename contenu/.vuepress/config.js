@@ -1,6 +1,7 @@
 module.exports = {
     title: "Meubles design",
     description: "Découvrez notre collection de meuble design madin in JonJon",
+    serviceWorker : true,
     themeConfig: {
       nav: [
         {
