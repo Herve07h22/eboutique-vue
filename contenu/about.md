@@ -1,15 +1,22 @@
 ---
 layout: about
-title : A propos de nous 
-pictures :
--  { path : "", name : about1.jpg, height: 1443, width: 1088 }
--  { path : "", name : about2.jpg, height: 675, width: 477 }
+title: A propos de nous
+pictures:
+- path: ''
+  name: about1.jpg
+  height: 1443
+  width: 1088
+- path: ''
+  name: about2.jpg
+  height: 675
+  width: 477
+
 ---
 # Créateur de mobilier écologique et ludique
 
-JonJon est une marque déposée en mars 2005 qui a reçu le soutien de grands noms du designe français. 
-C’est aussi un univers peuplé d’objets ludiques et écologiques, pratiques, poétiques …
-et sympathiques !   
+JonJon est une marque déposée en mars 2005 qui a reçu le soutien de grands noms du designe français. C’est aussi un univers peuplé d’objets ludiques et écologiques, pratiques, poétiques … et sympathiques ! 
+
+hello
 
 ## Qui sommes-nous ?
 
